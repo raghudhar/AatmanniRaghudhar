@@ -1,0 +1,19 @@
+Key points to understand
+-b File :- file exists and is block special
+-c File :- file exists and is character special
+-d File :- file exists and is a directory
+-e File :- file exists
+-f File :- file exists and is a regular file
+-h File :- file exists and is a symbolic link (same as -L)
+-G FIle:- True if the file exists and has the same group as the user running the command
+-g File :- True if the file exists and has sticky bit flag set-group-id (sgid) flag set.
+-k file:- True if the file exists and has a sticky bit flaf set
+-L file:- True if the file exists and is a symbolic link
+-O file:- True if the file exists and is owned by the user running the command
+-p File:- True if the file exists and is a pipe
+-r File:- True if the file exists and is readable
+-S File:- True if the file exists and is a socket
+-s File:- True if the file exists and has nonzero size
+-u File:- True if the file exists and set-user-id (suid) flag is set
+-w File:- True if the file exists and is writable
+-x File:- True if the file exists and is executable
