@@ -1,11 +1,12 @@
 #!/bin/bash
 echo "Enter the string you want to reverse"
-read string
-len =`echo -n $string | wc -c`
-echo "No. of characteristics : $len"
-while test $len -gt 0
+read n
+num=0
+while [ -$n -gt 0 ]
 do
-	rev=$rev `echo $string | cut -c $len`
-	len= `expr $len - 1`
+	num=$(expr $num \* 10 )
+	k=$(expr $n % 10 )
+	num=$(expr $num + $k)
+	n=$(expr $n / 10 )
 done
-echo "The reverse string is :$rev
+echo number is $num

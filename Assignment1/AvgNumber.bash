@@ -12,12 +12,12 @@ array=(1 2 3 4 5 6 7)
 while [ $n -gt 0 ]
 do
 	#copy element in a temp variable
-	num=${array[`expr $n -1`]}
+	num=${array[`expr $n - 1`]}
 	#add them to sum
 	sum=`expr $sum + $num`
 	#decrement count of n
 	n=`expr $n - 1`
 done
 #displaying the average by piping with bc command is bash calculator command
-avg=`echo "$sum / $m" | bc -1`
+avg=`echo "$sum / $m" | bc --l`
 printf '0.3f' "$avg"
